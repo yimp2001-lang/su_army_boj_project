@@ -28,7 +28,7 @@ def solve():
         cost,cnt = map(int,input().split())
         per = cnt/cost
         city.append((per,cost,cnt))
-    city.sort(key=lambda x : (-x[0],-x[1]))
+    city.sort(key=lambda x : (-x[0],-x[2]))
     for i in range(N):
         make_dp(dp,city[i])
     print(dp[C])
